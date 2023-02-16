@@ -24,9 +24,11 @@ html {
     height: 100vh;
 }
 body {
+    display: flex;
+    flex-direction: column;
     background-color: hsl(257, 40%, 49%);
     width: 100vw;
-    min-height: min-content;
+    min-height: 100vh;
     font-family: Open Sans, Arial, sans-serif;
     color: white;
     background-image: url(images/bg-desktop.svg);
@@ -49,17 +51,18 @@ header img {
 }
 /* main styles */
 main {
-    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: left;
     align-items: center;
     width: 92%;
     margin: auto;
+    flex: 1 0 auto;
 }
 main img {
     width: 48vw;
     margin-right: 35px;
+    margin-bottom: auto;
 }
 main section {
     margin-top: 5.5vh;
@@ -80,7 +83,7 @@ main h2 {
 }
 section button {
     font-size: 18px;
-    padding: 1.8vh 3.3vw;
+    padding: 1.8vh 3.2vw;
     border: none;
     border-radius: 50px;
     color: hsl(257, 40%, 49%);
@@ -92,11 +95,15 @@ section button:hover {
     color: white;
     background-color: hsl(300, 69%, 71%);
 }
-/* icons styles */
+/* footer styles */
+footer {
+    position: relative;
+    flex-shrink: 0;
+    height: 10vh;
+}
 .social-media-icons {
     position: absolute;
-    bottom: -3vh;
-    right: 4vw;
+    right: 15vw;
     display: flex;
     gap: 15px;
     justify-content: center;
@@ -108,8 +115,8 @@ section button:hover {
     margin: 0;
     cursor: pointer;
     padding: 8px;
-    width: 21px;
-    height: 21px;
+    width: 19px;
+    height: 19px;
     border: 1.2px solid white;
     border-radius: 100%;
     color: #ffffff;
@@ -118,14 +125,82 @@ section button:hover {
     border: 1.2px solid hsl(300, 69%, 71%);
     color: hsl(300, 69%, 71%);
 }
+/* @media (max-width: 1600px){
+    body {
+        background-size: cover;
+    }
+} */
 
-@media (max-width: 1075px) {
+@media (max-width: 815px) {
+    body {
+        background-image: url(images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    header {
+        margin-bottom: 30px;
+    }
+    header img {
+        width: 25vw;
+        padding-left: 6vw;
+        margin-bottom: 45px;
+    }
+    main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     main img {
         object-fit: contain;
         margin-right: 0;
-        width: 88vw;
+        width: 80vw;
     }
-    main {
-        display: block;
+    main section {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    main h1 {
+        text-align: center;
+        font-size: 5.5vw;
+        max-width: 70vw;
+        margin-bottom: 15px;
+    }
+    main h2 {
+        text-align: center;
+        font-size: 3.5vw;
+        max-width: 72vw;
+        margin-bottom: 25px;
+    }
+    section button {
+        font-size: 18px;
+        padding: 1.3vh 15vw;
+        border: none;
+        border-radius: 50px;
+        color: hsl(257, 40%, 49%);
+        font-weight: 400;
+        box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+    }
+    .social-media-icons {
+        position: static;
+        right: 0;
+        gap: 9px;
+    }
+    .facebook-icon,
+    .twitter-icon,
+    .instagram-icon {
+        padding: 6px;
+        width: 18px;
+        height: 18px;
+    }
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        height: 10vh;
     }
 }
