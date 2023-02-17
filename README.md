@@ -18,4 +18,4 @@ This is a solution to the [Huddle landing page with single introductory section 
 
 ### Links
 
-- Live Site URL: [https://yasenyanev.github.io/huddle-landing-page/]
+- Live Site URL: https://yasenyanev.github.io/huddle-landing-page/
