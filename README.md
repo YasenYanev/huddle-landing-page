@@ -13,8 +13,8 @@ This is a solution to the [Huddle landing page with single introductory section 
 ## Overview
 
 ### Screenshots
-![Desktop Screenshot](Screenshot-desktop.png)
-![Mobile Screenshot](Screenshot-mobile.png)
+![Desktop Screenshot](images/Screenshot-desktop.png)
+![Mobile Screenshot](images/Screenshot-mobile.png)
 
 ### Links
 

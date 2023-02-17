@@ -217,6 +217,7 @@ section button:hover::after {
     main img {
         object-fit: contain;
         margin-right: 0;
+        margin-bottom: 65px;
         width: 80vw;
     }
     main section {
@@ -225,6 +226,8 @@ section button:hover::after {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: 0;
+        margin-bottom: auto;
     }
     main h1 {
         text-align: center;
