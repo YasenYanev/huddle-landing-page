@@ -44,7 +44,7 @@ header {
     width: 92%;
     margin: auto;
     margin-top: 40px;
-    margin-bottom: 105px;
+    margin-bottom: 90px;
 }
 header img {
     width: 180px;
@@ -82,6 +82,7 @@ main h2 {
     margin-bottom: 25px;
 }
 section button {
+    position: relative;
     font-size: 18px;
     padding: 1.8vh 3.2vw;
     border: none;
@@ -99,11 +100,11 @@ section button:hover {
 footer {
     position: relative;
     flex-shrink: 0;
-    height: 10vh;
+    height: 6vh;
 }
 .social-media-icons {
     position: absolute;
-    right: 15vw;
+    right: 4vw;
     display: flex;
     gap: 15px;
     justify-content: center;
@@ -121,17 +122,79 @@ footer {
     border-radius: 100%;
     color: #ffffff;
 }
-.social-media-icons > *:hover {
+.social-media-icons .icon > *:hover {
     border: 1.2px solid hsl(300, 69%, 71%);
     color: hsl(300, 69%, 71%);
 }
-/* @media (max-width: 1600px){
-    body {
-        background-size: cover;
-    }
-} */
+/* tooltips */
+.facebook-tooltip,
+.twitter-tooltip,
+.instagram-tooltip {
+    position: relative;
+}
+.facebook-tooltip::before {
+    position: absolute;
+    content: 'Facebook';
+    color: #ffffff;
+    background-color: rgba(182, 180, 180, 0.1);
+    font-size: 11px;
+    top: -20px;
+    left: -5px;
+    padding: 1px;
+    border-radius: 5px;
+    transform: scale(0);
+}
+.facebook-tooltip:hover::before {
+    transform: scale(1);
+}
+.twitter-tooltip::before {
+    position: absolute;
+    content: 'Twitter';
+    color: #ffffff;
+    background-color: rgba(182, 180, 180, 0.1);
+    font-size: 11px;
+    top: -20px;
+    left: -5px;
+    padding: 1px;
+    border-radius: 5px;
+    transform: scale(0);
+}
+.twitter-tooltip:hover::before {
+    transform: scale(1);
+}
+.instagram-tooltip::before {
+    position: absolute;
+    content: 'Instagram';
+    color: #ffffff;
+    background-color: rgba(182, 180, 180, 0.1);
+    font-size: 11px;
+    top: -20px;
+    left: -5px;
+    padding: 1px;
+    border-radius: 5px;
+    transform: scale(0);
+}
+.instagram-tooltip:hover::before {
+    transform: scale(1);
+}
 
-@media (max-width: 815px) {
+section button::after {
+    position: absolute;
+    content: 'Register';
+    color: #ffffff;
+    background-color: rgba(182, 180, 180, 0.1);
+    font-size: 12px;
+    bottom: -22px;
+    right: 0;
+    padding: 2px;
+    border-radius: 5px;
+    transform: scale(0);
+}
+section button:hover::after {
+    transform: scale(1);
+}
+/* media queries */
+@media (max-width: 778px) {
     body {
         background-image: url(images/bg-mobile.svg);
         background-repeat: no-repeat;
@@ -149,6 +212,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 18px;
     }
     main img {
         object-fit: contain;
